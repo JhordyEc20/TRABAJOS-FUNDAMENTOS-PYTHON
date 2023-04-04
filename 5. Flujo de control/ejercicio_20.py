@@ -9,4 +9,4 @@ hours = days * 24
 minutes = hours * 60
 seconds = minutes * 60
 
-print("{} days are {} hours, {} minutes, and {} seconds.".format(days, hours, minutes, seconds)
+print("{} days are {} hours, {} minutes, and {} seconds.".format(days, hours, minutes, seconds))
