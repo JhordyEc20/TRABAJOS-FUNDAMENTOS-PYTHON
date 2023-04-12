@@ -70,20 +70,42 @@ def contador_vocales(user_str):
     print("Numeros de vocales {}".format(num_vocales))
 
 #7
-def suma_numeros_pares():
-    return "7. Suma de numeros pares"
-
+def suma_numeros_pares(num):
+    suma = 0
+    if num % 2 is 0:
+        suma += num
+    print(suma)
 #8
-def calculo_potencial():
-    return "8. calculo de potencial"
+def calculo_potencial(num, exp):
+    print(num**exp)
+
 
 #9
-def calculo_promedio():
-    return "9. calculo de promedio"
+def calculo_promedio(num):
+    num = num.split(',')
+
+    suma = []
+    i = 0
+
+    while i < len(num):
+        suma.append(int( num[i]))
+        i += 1
+
+    prom = sum(suma) / len(num)
+    print('Promedio', prom) 
+
 
 #10
-def contador_palabras():
-    return "10. Contador de palabras"
+def contador_palabras(user_frase):
+    caract = 0
+    i = 0
+
+    while i < len(user_frase):
+        if user_frase[i] == " ":
+            caract += 1
+        i += 1
+
+    print('Hay {} caracteres'.format(caract))
 
 
 opcion = 0
@@ -132,16 +154,21 @@ while (opcion >= 0) and (opcion <= 10):
         contador_vocales(user_str)
 
     elif opcion == 7:
-        print( suma_numeros_pares())
+        user_num = int( input("Ingrese numero: "))
+        suma_numeros_pares(user_num)
     
     elif opcion == 8:
-        print( calculo_potencial())
+        user_num = int( input("Ingrese numero: "))
+        user_exp = int( input("Ingrese exponente: "))
+        calculo_potencial(user_num, user_exp)
 
     elif opcion == 9:
-        print( calculo_promedio)
+        user_num = input("Ingrese notas: ")
+        calculo_promedio(user_num)
 
     elif opcion == 10:
-        print( contador_palabras)
+        user_frase = input("Ingrese frase: ")
+        contador_palabras(user_frase)
     
     elif opcion == 0:
         break
