@@ -17,7 +17,6 @@ def contador_decendente(num):
         i -= 1
         num = num - 1
         print(num)
- 
 
 #3
 def suma_numeros(num):
@@ -40,6 +39,7 @@ def factorial(num):
         i += 1
 
     print(fact) 
+
 #5
 def adivinar_numero():
     num_adv = 5
@@ -72,13 +72,13 @@ def contador_vocales(user_str):
 #7
 def suma_numeros_pares(num):
     suma = 0
-    if num % 2 is 0:
+    if num % 2 == 0:
         suma += num
     print(suma)
+
 #8
 def calculo_potencial(num, exp):
     print(num**exp)
-
 
 #9
 def calculo_promedio(num):
@@ -94,7 +94,6 @@ def calculo_promedio(num):
     prom = sum(suma) / len(num)
     print('Promedio', prom) 
 
-
 #10
 def contador_palabras(user_frase):
     caract = 0
@@ -109,23 +108,23 @@ def contador_palabras(user_frase):
 
 
 opcion = 0
+menu = '''
+1. Contador Ascendente
+2. Contador Decendente
+3. Suma de numeros
+4. Factorial
+5. Adivinar numero
+6. Contador de vocales
+7. Suma de numeros pares
+8. Calculo de potencia
+9. Calculo de promedio
+10. Contador de palabras
+0. Salir
+>>> '''
 
 while (opcion >= 0) and (opcion <= 10):
-    print("#"*8, "MENU OPCIONES", "#"*8)
-    print("1. Contador Ascendente")
-    print("2. Contador Decendente")
-    print("3. Suma de numeros")
-    print("4. Factorial")
-    print("5. Adivinar numero")
-    print("6. Contador de vocales")
-    print("7. Suma de numeros pares")
-    print("8. Calculo de potencia")
-    print("9. Calculo de promedio")
-    print("10. Contador de palabras")
-    print("0. Salir")
-    
-
-    opcion = int( input("Opcion: "))
+    print('#'*8 + 'MENU OPCIONES' + '#'*8)
+    opcion = int( input(menu))
     # opciones
 
     # 1. Contador Ascendente
@@ -176,6 +175,3 @@ while (opcion >= 0) and (opcion <= 10):
     else:
         print("Opcion incorrecta")
     break
-
-
-
